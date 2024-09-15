@@ -19,7 +19,7 @@
 }
 
 .formcontainer {
-    background-image: url('../images/sfkc5.jpg');
+    background-image: url('/src/images/sfkc5.jpg');
     /* Replace with the path to your image */
     background-size: cover;
     /* Ensure the image covers the entire form */
