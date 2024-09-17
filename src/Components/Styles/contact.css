@@ -1,0 +1,121 @@
+/* General Styles */
+
+
+.contact-us {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.contact-us h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-us p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formcontainer {
+    background-image: url('/src/images/sfkc5.jpg');
+    /* Replace with the path to your image */
+    background-size: cover;
+    /* Ensure the image covers the entire form */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent repeating the image */
+    padding: 20px;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    display: flex;
+    box-shadow: 0 0 10px 0 #343535;
+}
+
+.form-msg {
+    margin-top: 20%;
+    padding: 15px;
+    width: 50%;
+}
+
+.form-msg p {
+
+    text-align: left;
+}
+
+.contact-form {
+    width: 50%;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.map-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
+        /* Adjusted height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-details {
+        font-size: 14px;
+    }
+}

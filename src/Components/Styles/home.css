@@ -1,0 +1,18 @@
+.slide_container {}
+
+.carousel {
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+
+.slide_image {
+    height: 600px;
+    width: 100%;
+}
+
+.home_intro {
+    text-align: justify;
+    margin: 50px;
+    font-size: large;
+}
