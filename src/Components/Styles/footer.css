@@ -2,8 +2,8 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     box-shadow: 0 3px 4px 5px rgba(0, 0, 0, 0.1);
-    background-color: green;
-    color: #040404;
+    background-color: white;
+    color: #780680;
   }
   
   footer h5 {
@@ -20,12 +20,12 @@ footer {
   }
   
   footer a {
-    color: #040404;
+    color: #780680;
     text-decoration: none;
   }
   
   footer a:hover {
-    color: #ffc107;
+    color: #090909;
   }
   
   footer .fab {
@@ -33,7 +33,7 @@ footer {
   }
   
   footer .fab:hover {
-    color: #ffc107;
+    color: #0c0c0c;
   }
   
   .text-center {
@@ -42,5 +42,12 @@ footer {
   
 
   .logoImg{
-    width: 22%;
+    width: 50%;
+    margin-left: 13%;
+  }
+  .symbol{
+    font-size: 30px;
+  }
+  .footericon{
+   padding-right: 10px;
   }

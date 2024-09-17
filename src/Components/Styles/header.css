@@ -1,5 +1,5 @@
 .header {
-    background-color: green;
+    background-color: white;
     width: 100%;
     padding: 0; /* Remove any default padding */
 }
@@ -13,20 +13,20 @@
 
 .icons {
     font-weight: bold;
-    color: white; /* Text inside Offcanvas */
+    color: #780680; /* Text inside Offcanvas */
 }
 
 .icons:hover {
-    color: #ffc107; /* Yellow color on hover */
+    color: #0a0a0a; /* Yellow color on hover */
 }
 
 .icons-lg {
     font-weight: bold;
-    color: black; /* Text on larger screens */
+    color: #780680; /* Text on larger screens */
 }
 
 .icons-lg:hover {
-    color: #ffc107; /* Yellow color on hover for large screens */
+    color: rgb(4, 4, 4); /* Yellow color on hover for large screens */
 }
 
 .logo {
@@ -37,10 +37,7 @@
     justify-content: end;
 }
 
-.background {
-    background-color: green;
-    color: black;
-}
+
 
 /* Media Query for responsive behavior */
 @media (max-width: 991px) {
@@ -48,13 +45,9 @@
         display: none; /* Hide inline links on smaller screens */
     }
 
-    .icons {
-        color: black; /* Text color in Offcanvas */
-    }
 
     .offcanvas-menu {
         right: 0 !important; /* Fix Offcanvas to the right */
         justify-content: end;
-        background-color: rgb(242, 238, 247);
     }
 }

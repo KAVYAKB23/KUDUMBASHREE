@@ -1,6 +1,13 @@
 .product {
     text-align: center;
   }
+  .heading{
+    text-align: center;
+    color:rgb(45, 44, 46);
+    margin-bottom: 3%;
+    margin-top: 3%;
+    
+}
   
   /* Gallery Container */
   .gallery-container {

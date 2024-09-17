@@ -32,17 +32,17 @@ function Footer() {
           </Col>
           <Col md={3}>
             <h5>Contact us</h5>
-             <p> <FontAwesomeIcon icon={faHouse} />kudumbashree office tvm</p>
-             <p><FontAwesomeIcon icon={faEnvelope} />k@gmail.com</p>
-             <p><FontAwesomeIcon icon={faPhone} />+91**********</p>
+             <p> <FontAwesomeIcon className='footericon' icon={faHouse} />kudumbashree office tvm</p>
+             <p><FontAwesomeIcon  className='footericon'icon={faEnvelope} />k@gmail.com</p>
+             <p><FontAwesomeIcon  className='footericon'icon={faPhone} />+91**********</p>
           </Col>
           <Col md={3}>
             <h5>Follow Us</h5>
             <ul className="list-unstyled d-flex">
-              <li><a href="#" className=" me-3"><FontAwesomeIcon icon={faFacebook} /></a></li>
-              <li><a href="#" className=" me-3"><FontAwesomeIcon icon={faTwitter} /></a></li>
-              <li><a href="#" className=" me-3"><FontAwesomeIcon icon={faInstagram} /></a></li>
-              <li><a href="#" className="me-3"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+              <li><a href="#" className="symbol me-3"><FontAwesomeIcon icon={faFacebook} /></a></li>
+              <li><a href="#" className="symbol me-3"><FontAwesomeIcon icon={faTwitter} /></a></li>
+              <li><a href="#" className="symbol me-3"><FontAwesomeIcon icon={faInstagram} /></a></li>
+              <li><a href="#" className="symbol me-3"><FontAwesomeIcon icon={faLinkedin} /></a></li>
             </ul>
           </Col>
 

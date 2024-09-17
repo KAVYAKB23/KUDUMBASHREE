@@ -56,7 +56,7 @@ function OffcanvasExample() {
             </>
           ) : (
             /* Inline Navbar links on large screens */
-            <Nav className="d-flex">
+            <Nav className="d-flex" style={{marginRight:'8%'}}>
               <Nav.Link className='icons-lg' href="/">HOME</Nav.Link>
               <Nav.Link className='icons-lg' href="/about">ABOUT US</Nav.Link>
               <Nav.Link className='icons-lg' href="/gallery">GALLERY</Nav.Link>
