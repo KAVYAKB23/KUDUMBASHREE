@@ -1,6 +1,3 @@
-/* General Styles */
-
-
 .contact-us {
     padding: 20px;
     max-width: 800px;
@@ -19,10 +16,9 @@
 }
 
 .formcontainer {
-    background-image: url('/src/images/sfkc5.jpg');
-    /* Replace with the path to your image */
+
     background-size: cover;
-    /* Ensure the image covers the entire form */
+
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
@@ -58,6 +54,7 @@
 
 .contact-form input,
 .contact-form textarea {
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -86,9 +83,14 @@
 }
 
 .contact-details {
-    margin-top: 5%;
     text-align: center;
     font-size: 16px;
+}
+
+
+.conatct_details_info {
+    padding-left: 5%;
+    margin-bottom: 5%;
 }
 
 .contact-details p {
