@@ -21,10 +21,10 @@ function Footer() {
           <Col md={4}>
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="#home"  className="text-secondary">Home</a></li>
-              <li><a href="#about" className="text-secondary">About Us</a></li>
-              <li><a href="#gallery"  className="text-secondary">Gallery</a></li>
-              <li><a href="#contact" className="text-secondary">Contact Us</a></li>
+              <li><a href="/"  className="text-secondary">Home</a></li>
+              <li><a href="/about" className="text-secondary">About Us</a></li>
+              <li><a href="/gallery"  className="text-secondary">Gallery</a></li>
+              <li><a href="/contact" className="text-secondary">Contact Us</a></li>
             </ul>
           </Col>
           <Col md={4}>
