@@ -4,6 +4,7 @@ import './Styles/about.css'
 function Aboutus() {
     return (
         <div> 
+        
             <h1 className='heading'>ABOUT US</h1>
 
             <p className='notes'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex in quis omnis neque, vitae, odio voluptas odit delectus placeat expedita deleniti accusantium voluptates cupiditate, ipsum dignissimos vel facere earum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum praesentium aspernatur saepe placeat iure repellendus, rem optio repellat ipsam tempora distinctio at expedita fuga veritatis tempore. Possimus magnam labore architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat porro, eius incidunt sit rerum corporis officia quibusdam eum quos doloremque iusto repellendus expedita voluptatem sunt totam facere perferendis voluptatum!</p>
@@ -29,6 +30,7 @@ function Aboutus() {
                 As pointed out by Rajeev Sadanandan, who was the district collector at Malappuram during the experiment there, women in NHGs fixed 2% interest rate on the credit availed from the groups based on their experience in traditional organisations.
 
                 Eventually it was the decentralisation of powers to PRIs and the People’s Plan Campaign set the stage for Kudumbashree’s formation.</p>
+                
         </div>
 
 
