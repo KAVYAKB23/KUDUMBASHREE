@@ -1,13 +1,60 @@
-.logo{
+.header {
+    background-color: green;
+    width: 100%;
+    padding: 0; /* Remove any default padding */
+}
+
+.toggle-wrapper {
+    position: absolute;
+    right: 15px; /* Adjust right padding as needed */
+    top: 15px;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.icons {
+    font-weight: bold;
+    color: white; /* Text inside Offcanvas */
+}
+
+.icons:hover {
+    color: #ffc107; /* Yellow color on hover */
+}
+
+.icons-lg {
+    font-weight: bold;
+    color: black; /* Text on larger screens */
+}
+
+.icons-lg:hover {
+    color: #ffc107; /* Yellow color on hover for large screens */
+}
+
+.logo {
     width: 25%;
 }
-.close{
+
+.close {
     justify-content: end;
 }
-.icons{
-    font-weight: bold;
-    color: white;
+
+.background {
+    background-color: green;
+    color: black;
 }
-.background{
-    background-color: rgb(177, 18, 195);
+
+/* Media Query for responsive behavior */
+@media (max-width: 991px) {
+    .icons-lg {
+        display: none; /* Hide inline links on smaller screens */
+    }
+
+    .icons {
+        color: black; /* Text color in Offcanvas */
+    }
+
+    .offcanvas-menu {
+        right: 0 !important; /* Fix Offcanvas to the right */
+        justify-content: end;
+        background-color: rgb(242, 238, 247);
+    }
 }
