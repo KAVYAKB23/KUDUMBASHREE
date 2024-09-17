@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../Styles/contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -22,17 +22,17 @@ function Contact() {
     const { name, value } = e.target;
     setformData({ ...formData, [name]: value });
   };
-  const handleSubmit = () => {
+  console.log(formData);
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setformError(validation(formData));
     setisSubmit(true);
-  };
-  useEffect(() => {
-    console.log(formError);
     if (Object.keys(formError).length === 0 && isSubmit) {
-      // alert("form submited");
+      alert("form submited");
       console.log("form submited");
     }
-  });
+  };
+
   return (
     <>
       <div className="contact-us">
@@ -68,46 +68,44 @@ function Contact() {
           <form className="contact-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" onChange={handleChange} />
-            <p>{formError.name}</p>
+            <p style={{ textAlign: "left" }} className="error_msg">
+              {formError.name}
+            </p>
 
             <label>Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              onChange={handleChange}
-            />
-            <p>{formError.email}</p>
+            <input id="email" name="email" onChange={handleChange} />
+            <p style={{ textAlign: "left" }} className="error_msg">
+              {formError.email}
+            </p>
 
             <label>Phone</label>
             <input type="tel" id="phone" name="phone" onChange={handleChange} />
-            <p>{formError.phone}</p>
+            <p style={{ textAlign: "left" }} className="error_msg">
+              {formError.phone}
+            </p>
 
             <label>Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              onChange={handleChange}
-            ></textarea>
-            <p>{formError.message}</p>
+            <textarea name="message" onChange={handleChange}></textarea>
+            <p style={{ textAlign: "left" }} className="error_msg">
+              {formError.message}
+            </p>
 
             <button>Send</button>
           </form>
         </div>
-
-        <div className="map-container">
-          <h3>Our Location</h3>
-          <iframe
-            src="https://maps.google.com/maps?q=Lunar%20Enterprises,ulloor&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-            width="600"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            title="Google Maps"
-          ></iframe>
-        </div>
+      </div>
+      <div className="map-container">
+        <h3>Our Location</h3>
+        <iframe
+          className="map_frame"
+          src="https://maps.google.com/maps?q=Lunar%20Enterprises,ulloor&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          width="600"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          title="Google Maps"
+        ></iframe>
       </div>
     </>
   );

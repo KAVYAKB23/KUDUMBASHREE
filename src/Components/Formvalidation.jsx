@@ -1,7 +1,7 @@
 function validation(formData) {
   const errors = {};
   const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-  //   const phoneregex = ^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$ ;
+  //   const phoneregex = ^\d{10}$ ;
 
   if (!formData.name) {
     errors.name = "name is required";
@@ -13,7 +13,7 @@ function validation(formData) {
   }
   if (!formData.phone) {
     errors.phone = "phone number is required";
-  } else if (formData.phone.length < 10) {
+  } else if (formData.phone.length < 10 || formData.phone.length > 10) {
     errors.phone = "invalid phone number";
   }
   if (!formData.message) {
