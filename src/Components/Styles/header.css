@@ -1,0 +1,13 @@
+.logo{
+    width: 25%;
+}
+.close{
+    justify-content: end;
+}
+.icons{
+    font-weight: bold;
+    color: white;
+}
+.background{
+    background-color: rgb(177, 18, 195);
+}
