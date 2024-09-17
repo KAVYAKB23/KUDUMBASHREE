@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "../Styles/contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,8 +6,33 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import validation from "../Formvalidation";
 
 function Contact() {
+  const [formData, setformData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [formError, setformError] = useState("");
+  const [isSubmit, setisSubmit] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setformData({ ...formData, [name]: value });
+  };
+  const handleSubmit = () => {
+    setformError(validation(formData));
+    setisSubmit(true);
+  };
+  useEffect(() => {
+    console.log(formError);
+    if (Object.keys(formError).length === 0 && isSubmit) {
+      // alert("form submited");
+      console.log("form submited");
+    }
+  });
   return (
     <>
       <div className="contact-us">
@@ -16,48 +42,57 @@ function Contact() {
           questions you might have.
         </p>
 
-        <div className="contact-details">
-          <p>
-            <FontAwesomeIcon icon={faPhone} size="2x" />
-            <br />
-            {/* <strong>Phone:</strong>  */}
-            +91 888 888 888
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faAddressCard} size="2x" />
-            <br />
-            {/* <strong>Address:</strong> */}
-            Kudumbashree postoffice p.o. ,place,district
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faEnvelope} size="2x" />
-            <br />
-            {/* <strong>Email:</strong>  */}
-            contact@example.com
-          </p>
-        </div>
         <div className="formcontainer">
           <div className="form-msg">
-            <h3>Message Us</h3>
-            <p>
-              If you have any queries about our services or product message us
-              using this form
-            </p>
+            <div className="contact-details">
+              <p className="contact_icon">
+                <FontAwesomeIcon icon={faPhone} size="2x" />
+                <strong className="conatct_details_info">
+                  +91 888 888 888
+                </strong>
+              </p>
+              <p className="contact_icon">
+                <FontAwesomeIcon icon={faAddressCard} size="2x" />
+                <strong className="conatct_details_info">
+                  Kudumbashree postoffice p.o.
+                </strong>
+              </p>
+              <p className="contact_icon">
+                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                <strong className="conatct_details_info">
+                  contact@example.com
+                </strong>
+              </p>
+            </div>
           </div>
-          <form className="contact-form" action="/submit-form" method="post">
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" onChange={handleChange} />
+            <p>{formError.name}</p>
 
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+            <label>Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onChange={handleChange}
+            />
+            <p>{formError.email}</p>
 
-            <label htmlFor="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" />
+            <label>Phone</label>
+            <input type="tel" id="phone" name="phone" onChange={handleChange} />
+            <p>{formError.phone}</p>
 
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label>Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              onChange={handleChange}
+            ></textarea>
+            <p>{formError.message}</p>
 
-            <button type="submit">Send</button>
+            <button>Send</button>
           </form>
         </div>
 

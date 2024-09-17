@@ -71,6 +71,34 @@ function Home() {
           brighter, more equitable future for all.
         </p>
       </div>
+      <div>
+        <div className="news_container">
+          <h3>KUDUMBASHREE NEWS</h3>
+          <Carousel fade data-bs-theme="dark" className="news">
+            <Carousel.Item>
+              <img
+                className="slide_image"
+                src="https://i0.wp.com/nadaindia.org/wp-content/uploads/2024/09/Add-a-heading-64.webp?w=1024&ssl=1"
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="slide_image"
+                src="https://kudumbashreebazaar.com/addonsites/kudumbasree/img/combo/01.jpg"
+                alt="Second slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="slide_image"
+                src="https://s3-ap-southeast-1.amazonaws.com/sb-singleserver-prod-bucket/3b79ecdc88365d562a88f28b5c904e3a/o_1631854911.jpg"
+                alt="Third slide"
+              />
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
     </>
   );
 }
